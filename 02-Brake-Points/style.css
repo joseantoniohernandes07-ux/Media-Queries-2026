@@ -1,0 +1,103 @@
+/* 
+
+  BREAK POINTS
+
+  Valores especificos de ancho de pantalla donde cambia el diseño deñ sitio web para adaptarse mejor a las dimensiones del dispocitivo 
+  Ayuda a definir los estilos mediante los media queries.
+  Generalmente se definen segun las categorias comunes de dispositivos
+
+  Basandonos en dispocitivos:
+
+    Moviles pequeños de 320px a 479px de ancho de pantalla
+    Moviles de 480px a 767px de ancho de pantalla
+    Tablets de 768px a 1023px de anvho de pantalla
+    Laptops de 1024px a 1279px de ancho de pantalla
+    Escritorio 1280px a Tamaños superiores
+  
+  Es recomendable usar solo los brake points necesarios, generalmente de 3 a 5 para mantener un codigo manejable.
+
+  Los Media Queries se recomienda escribirlos al final del codigo css base 
+
+  Metodologias de diseño responcivo:
+
+    1. Mobiles First (Primero Mobiles).Primero se diseñan y establecen los estios base para pantallas pequeñas. Se usan los media queries con min-width para ir ampliando hacia tamaños mas grandes de pantalla
+
+    2. Desktop First (Primero Escritorios). Primero se diseña y establecen los estilos base para pantallas grandes. Se usan los media queries con max-width para ir reduciendo hacia tamaños mas pequeños de pantalla.
+
+*/
+
+/* Mobile First - Break Points  */
+
+/* Establecemos los estilos base para moviles pequeños de hasta 479px de ancho */
+
+body {
+  background-color: aqua;
+}
+
+/* Estilos para moviles entre 480px y 767px */
+@media screen and (min-width:480px) {
+  body {
+  background-color: green;
+  }
+}
+
+/* Estilos para tablestas entre 768px y 1023px */
+@media screen and (min-width:768px){
+  body {
+  background-color: yellow;
+}
+}
+
+/* Estilos para laptops entre 1024px y 1279px */
+@media screen and (min-width:1024px){
+  body {
+  background-color: pink;
+}
+}
+
+/* Estilos para escritorio de 1280px para arriba */
+@media screen and (min-width:1280px){
+  body {
+  background-color: purple;
+}
+}
+
+/* Desktop First - Break ponts */
+
+/* Definir los estilos base para pantallas de escritorio de 1280px y superiores */
+h1 {
+  font-size: 8rem;
+  color:white;
+}
+
+/* Estilos de laptop entre 1024px a 1279 */
+@media screen and (max-width:1279px){
+  h1 {
+  font-size: 6rem;
+  color: black;
+  }
+}
+
+/* Estilos de tabletas entre 768px y1026px */
+@media screen and (max-width:1026px){
+  h1 {
+  font-size: 4rem;
+  color: darkcyan;
+  }
+}
+
+/* Estilos de moviles entre 480px y 767px */
+@media screen and (max-width:767px){
+  h1 {
+  font-size: 2rem;
+  color: yellow;
+  }
+}
+
+/* Estilos de moviles peques menores entre 479px para abajo */
+@media screen and (max-width:479px){
+  h1 {
+  font-size: .5rem;
+  color: black;
+  }
+}
